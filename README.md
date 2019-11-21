@@ -29,7 +29,7 @@ Environment and goal information:
 
 Follow the instructions in [`Continuous_Control.ipynb`](./Continuous_Control.ipynb) to get started with training your own version of the agent, or look at the agent in action! 
 
-In the repo you'll also find 2 checkpoints (`checkpoint_actor.pth` and `checkpoint_critic.pth`) to load the trained agent and let him/them to their thing in the environment, checkout [`Continuous_Control.ipynb`](./Continuous_Control.ipynb)!
+In the repo you'll also find 2 checkpoints (`checkpoint_actor.pth` and `checkpoint_critic.pth`) to load the trained agent and let him/them do their thing in the environment, checkout [`Continuous_Control.ipynb`](./Continuous_Control.ipynb)!
 
 It took me 50 small tweaks and code optimizations to solve the environment:
 
