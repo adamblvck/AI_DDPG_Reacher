@@ -3,7 +3,7 @@
 
 ### Introduction
 
-For this project, we worked with the work with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
+For this project, I've worked with the [Reacher](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Environment-Examples.md#reacher) environment.
 
 An untrained agent behaves likes this:
 
