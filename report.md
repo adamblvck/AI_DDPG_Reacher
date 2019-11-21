@@ -22,18 +22,12 @@ In this project, we decided to use DDPG. Why?
 
 DDPG (Deep Deterministic Policy Gradient) is an algorithm that is said to be actor-critic-**ish**. Why is this? Well, in actor-critic algorithms the critic is used to determine the baseline, to critique the actor neural network. In DDPG, the actor-critic intertwinted dance is more akin to DQN, thus the critic is used to approximate the maximizer of the Q-values of the next_state.
 
-
-
 In DDPG, we'll be implemented a local and target network. The reason for the seperation is to decouple experiencing the environment from immediately learning about it. Thus we have:
 
 - A local and target network for the actor.
 - A local and target network for the critic.
 
-
-
 Next, in DDPG, just like in DQN, the agent tries random things and saves its experience in a replay buffer. After the replay buffer has collected enough samples, training can begin.
-
-
 
 Training involves:
 
@@ -41,8 +35,6 @@ Training involves:
 2. updating the critic_local network, based on actor_target predictions
 3. updating the actor_local network, based on critic_local predictions
 4. updating the target networks of both actor and critic. 
-
-
 
 Below some pseudo-code to explain how training works in DDPG:
 
@@ -149,7 +141,7 @@ The Hyperparameter of the solved environment:
 
 And this is how the best run looks like compared to other runs:
 
-![](./media/mean_score_time.png)
+![](./media/mean_score_episodes.png)
 
 
 
@@ -169,3 +161,8 @@ I would recommend myself to implement the other fascinating algorithms and compa
 - [A3C](https://arxiv.org/pdf/1602.01783.pdf)
 - [D4PG](https://openreview.net/pdf?id=SyZipzbCb)
 
+Out of curiosity, I landed on some blogpost explaining the DDPG algorithm, trying to train this exact "Reacher" environment by Udacity. After much explanation, the blogpost shows the reward graph having an average reward of 0.02 after 400 iterations. the blogger's conclusion was that DDPG **can't solve this environment**. Obviously he was wrong, and should have sticked longer to the hyperparameter tweaking.
+
+Which brings me to the next point, what if we could estimate the gradient of hyperparameters and thus build an AI that trains how to train a 'lower version' of himself? This way, a running algorithm could just optimize itself.
+
+My final point is that for me training AI agents has almost zero intuition to it. A lot of it feels like trying to do something to get a marginal better result on a scoreboard. I'm wondering if someone could make a big chart of all AI algorithms next to each other, and like a 'tree-of-life', classify them by complexity, or inherent algorithmic properties. Perhaps after doing such a segmentation, one could easier imagine a "next step" on a "promising branch" of AI algorithms, and thus speed up research.
